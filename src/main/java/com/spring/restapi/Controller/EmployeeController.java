@@ -10,7 +10,6 @@ import java.util.List;
 @RequestMapping("/api")
 public class EmployeeController {
     private final EmployeeService employeeService;
-
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
@@ -24,17 +23,20 @@ public class EmployeeController {
     public Employee findByEmployee(@PathVariable Employee employeeID) {
         return employeeID;
     }
+
     @PostMapping("/employee")
     public Employee createEmployee(@RequestBody Employee employeeID) {
         employeeID.setId(0);
         Employee dbEmployee = employeeService.save(employeeID);
         return dbEmployee;
     }
+
     @PutMapping("/employee")
     public Employee modifyEmployee(@RequestBody Employee employeeID) {
         Employee dbEmployee = employeeService.save(employeeID);
         return dbEmployee;
     }
+
     @DeleteMapping("/employee/{employeeID}")
     public Employee deleteEmployee(@PathVariable int employeeID) {
         Employee dbEmployee = employeeService.findByID(employeeID);
