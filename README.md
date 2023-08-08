@@ -13,3 +13,8 @@ which updates the details instead of posting the details with the @PostMapping m
 Finally, there is the deleteEmployee method which features the @DeleteMapping method, also contains the @PathVariable in the parameter
 with a variable of employeeID, we pass this through the parameters of the employeeService method so that it picks out the specific ID 
 and then deletes it. 
+
+I have also implemented some basic Security, and some basic JDBC code, the JDBC code selects the user_id, pw from the members table 
+where the user_id equals whatever the user inputs in Postman, I also have a table for the roles as well as a query from the roles, where 
+it will select user_id and roles from the roles table, if there is an Employee who is trying to delete a user, they will not be able to do it
+whereas if an admin was to delete the user, they will be able to. 
