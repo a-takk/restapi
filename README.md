@@ -16,5 +16,6 @@ and then deletes it.
 
 I have also implemented some basic Security, and some basic JDBC code, the JDBC code selects the user_id, pw from the members table 
 where the user_id equals whatever the user inputs in Postman, I also have a table for the roles as well as a query from the roles, where 
-it will select user_id and roles from the roles table, if there is an Employee who is trying to delete a user, they will not be able to do it
-whereas if an admin was to delete the user, they will be able to. 
+it will select user_id and roles from the roles table, if there is an Employee who is trying to delete a user, they will not be able to do it whereas if an admin was to delete the user, they will be able to. 
+
+**If there are any errors with my explanation as I still am quite new and would like to learn more :)**
